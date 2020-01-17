@@ -4,12 +4,12 @@ import LoginForm from "../Form/components/LoginForm";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <RegistrationForm />
-      <LoginForm />
-    </div>
-  );
+    return (
+        <div className="App">
+            <RegistrationForm />
+            <LoginForm />
+        </div>
+    );
 }
 
 export default App;
