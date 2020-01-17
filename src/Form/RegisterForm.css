@@ -1,0 +1,20 @@
+.RegisterForm .form-item {
+    margin-bottom: 15px;
+}
+
+.RegisterForm .form-item label {
+    display: block;
+}
+
+.RegisterForm .form-item,.has-error input {
+    border-color: red;
+}
+
+.RegisterForm .form-item .error-message {
+    display: block;
+}
+.RegisterForm .form-item .error-message .error-item {
+    color: red;
+    font-size: 10px;
+    display: block;
+}
