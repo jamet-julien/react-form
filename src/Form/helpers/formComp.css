@@ -1,0 +1,11 @@
+.formComp_item {
+    margin-bottom: 15px;
+}
+
+.formComp_item label {
+    display: block;
+}
+
+.formComp_item input {
+    display: block;
+}
