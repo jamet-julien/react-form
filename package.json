@@ -31,6 +31,7 @@
         "eslint-plugin-react-hooks": "^1.6.1",
         "file-loader": "4.3.0",
         "fs-extra": "^8.1.0",
+        "ghooks": "2.0.4",
         "html-webpack-plugin": "4.0.0-beta.5",
         "identity-obj-proxy": "3.0.0",
         "is-valid-email": "0.0.5",
@@ -68,7 +69,8 @@
         "commit": "git-cz",
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
-        "test": "node scripts/test.js"
+        "test": "node scripts/test.js",
+        "test:single": "node scripts/test.js --watchAll=false"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -97,7 +99,7 @@
             "react-app-polyfill/jsdom"
         ],
         "setupFilesAfterEnv": [
-            "<rootDir>/src/setupTests.js"
+            "<rootDir>/src/Helpers/setupTests.js"
         ],
         "testMatch": [
             "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
@@ -138,6 +140,9 @@
     "config": {
         "commitizen": {
             "path": "node_modules/cz-conventional-changelog"
+        },
+        "ghooks": {
+            "pre-commit": "npm run test:single"
         }
     },
     "babel": {
