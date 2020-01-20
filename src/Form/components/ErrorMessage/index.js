@@ -1,16 +1,7 @@
 import React from "react";
-import "./ErrorMessage.css";
+import FormHelperText from "@material-ui/core/FormHelperText";
 
-const ErrorMessage = ({ errors }) => {
-    return (
-        <span className="error-message">
-            {errors.map((err, k) => (
-                <span key={k} className="error-item">
-                    {err}
-                </span>
-            ))}
-        </span>
-    );
-};
+const ErrorMessage = ({ errors }) =>
+    errors.map((err, k) => <FormHelperText key={k}>{err}</FormHelperText>);
 
 export default ErrorMessage;
