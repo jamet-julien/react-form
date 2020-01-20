@@ -1,0 +1,26 @@
+.tabs {
+    background: #fefefe;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 9px;
+    color: #757575;
+}
+.tabs_link {
+    padding: 10px;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+}
+.tabs_link.actif {
+    color: #47afc6;
+    background-color: #fff;
+    border: #eaeaea 1px solid;
+}
+.tabs_panel {
+    grid-column: span 2;
+    padding: 20px;
+    border: #eaeaea 1px solid;
+    border-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
