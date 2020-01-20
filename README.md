@@ -1,6 +1,6 @@
 # REACT-FROM
 
-Mise en place d'un module d'enregistrement et de connection avec systéme d'onglet pour passer de l'un à l'autre.
+Mise en place d'un module d'enregistrement et de connexion avec systéme d'onglets pour passer de l'un à l'autre.
 
 ![Tab TabComponent](public/img/tab.png?raw=true "TabComponent")
 
@@ -40,7 +40,7 @@ Aprés un `git add (files)` lancer :
 npm run commit
 ```
 
-les tests seront lancés aprés avoir répondu au différente question relative au commit. Si les tests n'aboutissent pas il faudra alors corriger le code en conséquence puis relancer la commande.
+les tests seront lancés aprés avoir répondu aux différentes questions relatives au commit. Si les tests n'aboutissent pas il faudra alors corriger le code en conséquence puis relancer la commande.
 
 ## Project structure :
 
@@ -65,11 +65,11 @@ La structure du Dom se présente ainsi :
 Dans le dossier `Form` il y a actuellement deux composants:
 
 -   `<Registration/>` pour le formulaire d'enregistrement.
--   `<Login/>` pour le formulaire de connection.
+-   `<Login/>` pour le formulaire de connexion.
 
 #### la conception
 
-Tous deux partent de l'emploie du hook `useFormValidate` disponible au chemin suivant `src/Form/helpers/UseFormValidate.js`.
+Tous deux partent de l'emploi du hook `useFormValidate` disponible au chemin suivant `src/Form/helpers/UseFormValidate.js`.
 
 #### Usage de `useFormValidate(initialState, validateLogin, handleSubmit)`
 
@@ -95,7 +95,7 @@ const {
 | `errors`          | _Object_   | Données d'erreurs avec pour attribut le nom du champs erroné et pour valeur un tableau de description des erreurs |
 | `onChangeHandler` | _Function_ | Fonction à lancer à chaque changement de valeur pour mettre à jours les données                                   |
 | `onBlurHandler`   | _Function_ | Fonction à lancer à chaque changement de valeur avec vérification                                                 |
-| `onSubmitHandler` | _Function_ | Fonction à lancer à lors de la soumission des données permet la veriffication par la même occasion                |
+| `onSubmitHandler` | _Function_ | Fonction à lancer lors de la soumission des données permet la veriffication par la même occasion                  |
 
 ### Les composants du dossier `Tabs`
 
@@ -105,7 +105,7 @@ Dans le dossier `Tabs` il y a actuellement un seul composant:
 
 #### la conception
 
-Il part de l'emploie des hook `useLinkState` et `usePanelState` disponible au chemin suivant `src/Tabs/helpers/useTabs.js`.
+Il part de l'emploi des hooks `useLinkState` et `usePanelState` disponibles au chemin suivant `src/Tabs/helpers/useTabs.js`.
 
 #### Usage de `useLinkState({filter})`
 
