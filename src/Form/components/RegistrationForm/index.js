@@ -5,6 +5,9 @@ import ErrorMessage from "../ErrorMessage";
 
 import "../../helpers/formComp.css";
 
+const classNameItem = (error = false) =>
+    `formComp_item ${error ? "has-error" : ""}`;
+
 const initialState = {
     email: "",
     password: "",
@@ -28,11 +31,7 @@ const RegistrationForm = () => {
         <div className="formComp">
             <h1>Registration form</h1>
             <form onSubmit={onSubmitHandler}>
-                <div
-                    className={`formComp_item ${
-                        errors.email ? "has-error" : ""
-                    }`}
-                >
+                <div className={classNameItem(errors.email)}>
                     <label htmlFor="email">Email</label>
                     <input
                         type="text"
@@ -43,11 +42,7 @@ const RegistrationForm = () => {
                     />
                     {errors.email && <ErrorMessage errors={errors.email} />}
                 </div>
-                <div
-                    className={`formComp_item ${
-                        errors.password ? "has-error" : ""
-                    }`}
-                >
+                <div className={classNameItem(errors.password)}>
                     <label htmlFor="password">Password</label>
                     <input
                         type="password"
@@ -60,11 +55,7 @@ const RegistrationForm = () => {
                         <ErrorMessage errors={errors.password} />
                     )}
                 </div>
-                <div
-                    className={`formComp_item ${
-                        errors.confirm ? "has-error" : ""
-                    }`}
-                >
+                <div className={classNameItem(errors.confirm)}>
                     <label htmlFor="confirm">Confirm</label>
                     <input
                         type="password"
