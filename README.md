@@ -12,7 +12,7 @@ Mise en place du projet et installation des différentes librairies :
 npm install
 ```
 
-Liste des librairie ajoutées au projet initial:
+Liste des librairies ajoutées au projet initial:
 
 | Librairie           | Objectif                                                  |
 | :------------------ | :-------------------------------------------------------- |
@@ -40,7 +40,7 @@ Aprés un `git add (files)` lancer :
 npm run commit
 ```
 
-les tests seront lancer aprés avoir répondu au différents question relatif au commit. Si les tests n'aboutissent pas il faudra alors corriger le code en conséquence puis relancer la commande.
+les tests seront lancés aprés avoir répondu au différente question relative au commit. Si les tests n'aboutissent pas il faudra alors corriger le code en conséquence puis relancer la commande.
 
 ## Project structure :
 
@@ -62,7 +62,7 @@ La structure du Dom se présente ainsi :
 
 ### Les composants du dossier `Form`
 
-dans le dossier `Form` il y a actuellement deux composants:
+Dans le dossier `Form` il y a actuellement deux composants:
 
 -   `<Registration/>` pour le formulaire d'enregistrement.
 -   `<Login/>` pour le formulaire de connection.
@@ -85,13 +85,13 @@ const {
 
 | Entrée          | Type       | Description                                  |
 | :-------------- | :--------- | :------------------------------------------- |
-| `initialState`  | _Object_   | Données utilisées initiales                  |
+| `initialState`  | _Object_   | Données initiales utilisées                  |
 | `validateLogin` | _Function_ | Fonction de validation des données           |
 | `handleSubmit`  | _Function_ | Fonction lancée une fois les données valides |
 
 | Sortie            | Type       | Description                                                                                                       |
 | :---------------- | :--------- | :---------------------------------------------------------------------------------------------------------------- |
-| `values`          | _Object_   | Données utilisées                                                                                                 |
+| `values`          | _Object_   | Données utilisées et modifiées par l'utilisateur                                                                  |
 | `errors`          | _Object_   | Données d'erreurs avec pour attribut le nom du champs erroné et pour valeur un tableau de description des erreurs |
 | `onChangeHandler` | _Function_ | Fonction à lancer à chaque changement de valeur pour mettre à jours les données                                   |
 | `onBlurHandler`   | _Function_ | Fonction à lancer à chaque changement de valeur avec vérification                                                 |
@@ -99,7 +99,7 @@ const {
 
 ### Les composants du dossier `Tabs`
 
-dans le dossier `Tabs` il y a actuellement un seul composant:
+Dans le dossier `Tabs` il y a actuellement un seul composant:
 
 -   `<Simpletabs/>` pour le systeme d'onglet simple.
 
