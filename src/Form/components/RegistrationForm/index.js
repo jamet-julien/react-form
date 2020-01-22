@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import useFormValidate from "../../helpers/UseFormValidate";
 import { validateRegistration } from "../../helpers/validate";
 import { useStyles } from "../../helpers/useStyles";
 
 import ErrorMessage from "../ErrorMessage";
+import { FormContext } from "../../../Helpers/contextForm";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -15,13 +16,20 @@ const initialState = {
 };
 
 const RegistrationForm = ({ onSubmit }) => {
+    const { initFormData, setInitFormData } = useContext(FormContext);
+    const initialForm = { ...initialState, ...initFormData };
     const {
         values,
         errors,
         onChangeHandler,
         onBlurHandler,
         onSubmitHandler
-    } = useFormValidate(initialState, validateRegistration, handleSubmit);
+    } = useFormValidate(initialForm, validateRegistration, handleSubmit);
+
+    useEffect(() => {
+        setInitFormData(values);
+    }, [values, setInitFormData]);
+
     const classes = useStyles();
 
     function handleSubmit() {

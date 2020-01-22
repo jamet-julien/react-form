@@ -101,7 +101,7 @@ const {
 
 Dans le dossier `Tabs` il y a actuellement un seul composant:
 
--   `<Simpletabs/>` pour le systeme d'onglet simple.
+-   `<Simpletabs/>` pour le systeme d'onglets simple.
 
 #### la conception
 
