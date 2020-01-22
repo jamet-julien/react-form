@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from "react";
 import useFormValidate from "../../helpers/UseFormValidate";
 import { validateLogin } from "../../helpers/validate";
 import { useStyles } from "../../helpers/useStyles";
+import { mergeInitObject } from "../../helpers/utils";
+
 import ErrorMessage from "../ErrorMessage";
 import { FormContext } from "../../../Helpers/contextForm";
 
@@ -15,7 +17,7 @@ const initialState = {
 
 const LoginForm = ({ onSubmit }) => {
     const { initFormData, setInitFormData } = useContext(FormContext);
-    const initialForm = { ...initialState, ...initFormData };
+    const initialForm = mergeInitObject(initialState, initFormData);
     const {
         values,
         errors,
